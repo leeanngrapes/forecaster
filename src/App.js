@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Tile from "./components/Tile";
 
 const town = "Cheyenne";
@@ -10,44 +10,47 @@ function App() {
   const forecast = [
     {
       day: "Monday",
-      minTemp: "55",
-      maxTemp: "86",
-      overview: "Cloudy",
+      minTemp: "52",
+      maxTemp: "79",
+      overview: "Stormy",
     },
     {
       day: "Tuesday",
-      minTemp: "58",
-      maxTemp: "81",
-      overview: "Sunny",
+      minTemp: "48",
+      maxTemp: "72",
+      overview: "Partly sunny",
     },
     {
       day: "Wednesday",
-      minTemp: "51",
-      maxTemp: "89",
-      overview: "Mostly Sunny",
+      minTemp: "45",
+      maxTemp: "84",
+      overview: "Sunny",
     },
   ];
 
   return (
     <div className="App">
       <header className="App-header">
+        <h1>Forecaster</h1>
+        <h2>
+          It is <em>{weather}</em> today in <u>{town}</u>.
+        </h2>
+        <h3>The time is {new Date().toLocaleTimeString()}.</h3>
         <img src={logo} className="App-logo" alt="logo" />
-        Forecaster
-        <p>
-          It is {weather} today in {town}.
-        </p>
-        <p>The time is {new Date().toLocaleTimeString()}.</p>
-        <Container className="d-flex flex-row justify-content-around">
-          {forecast.map((item, i) => (
-            <div key={i}>
-              <Tile
-                day={item.day}
-                minTemp={item.minTemp}
-                maxTemp={item.maxTemp}
-                overview={item.overview}
-              />
-            </div>
-          ))}
+        <Container className="mt-5">
+          <h4>Looking ahead</h4>
+          <Row className="flex-row mt-3">
+            {forecast.map((item, i) => (
+              <Col key={i}>
+                <Tile
+                  day={item.day}
+                  minTemp={item.minTemp}
+                  maxTemp={item.maxTemp}
+                  overview={item.overview}
+                />
+              </Col>
+            ))}
+          </Row>
         </Container>
       </header>
     </div>
