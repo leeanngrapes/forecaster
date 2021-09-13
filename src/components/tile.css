@@ -3,9 +3,13 @@
   background: rgba(255, 255, 255, 0.1);
   background: linear-gradient(
     199deg,
-    rgba(240, 240, 240, 0.411) 0%,
-    rgba(240, 240, 240, 0.11) 67%
+    rgba(240, 240, 240, 0.5) 0%,
+    rgba(240, 240, 240, 0.2) 67%
   ) !important;
-  border: 1px solid rgba(240, 240, 240, 0.11) !important;
-  border-radius: 10px !important;
+  border: none !important;
+  border-radius: 1em !important;
+
+  min-width: 100px;
+  max-width: 300px;
+  box-shadow: 2px 1px 10px #2e3b4d49;
 }
