@@ -1,11 +1,24 @@
 .tile {
   color: rgb(26, 19, 92);
-  background: rgba(255, 255, 255, 0.1);
-  background: linear-gradient(
-    199deg,
-    rgba(240, 240, 240, 0.411) 0%,
-    rgba(240, 240, 240, 0.11) 67%
-  ) !important;
-  border: 1px solid rgba(240, 240, 240, 0.11) !important;
-  border-radius: 10px !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: none !important;
+  border-radius: 1em !important;
+}
+
+.tile-title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1em;
+}
+.shape {
+  position: absolute;
+  width: 150px;
+  top: 35rem;
+  left: 0.5rem;
 }

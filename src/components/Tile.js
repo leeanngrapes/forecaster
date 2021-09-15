@@ -1,19 +1,17 @@
 import React from "react";
-import { Card, Row } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import styles from "./tile.css";
 
 function Tile(props) {
   return (
-    <Card className="d-flex mx-auto p-5 tile">
-      <Card.Title>
-        <p>{props.day}</p>
-      </Card.Title>
-      <Card.Body>
-        <div className="d-flex flex-row justify-content-center">
-          <p>{props.maxTemp}</p>|<p>{props.minTemp}</p>
-        </div>
-        <p>{props.overview}</p>
-      </Card.Body>
+    <Card className="p-3 m-3 tile col-md">
+      <h4 className="tile-title">{props.day}</h4>
+      <div className="d-flex flex-row justify-content-center">
+        <p>
+          {props.maxTemp}° {""}|{""} {props.minTemp}°
+        </p>
+      </div>
+      <p>{props.overview}</p>
     </Card>
   );
 }
