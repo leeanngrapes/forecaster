@@ -2,6 +2,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Container, Row, Col } from "react-bootstrap";
 import Tile from "./components/Tile";
+import NavigationBar from "./components/Nav";
+// import clouds from "./assets/";
 
 const town = "Cheyenne";
 const weather = "cloudy";
@@ -30,6 +32,7 @@ function App() {
 
   return (
     <div className="App">
+      <NavigationBar />
       <header className="App-header">
         <h1>Forecaster</h1>
         <h2>
