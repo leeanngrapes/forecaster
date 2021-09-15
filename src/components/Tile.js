@@ -1,10 +1,10 @@
 import React from "react";
-import { Card, Row, Col } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import styles from "./tile.css";
 
 function Tile(props) {
   return (
-    <Card className="d-flex mx-1 pt-2 tile">
+    <Card className="p-3 m-3 tile col-md">
       <h4 className="tile-title">{props.day}</h4>
       <div className="d-flex flex-row justify-content-center">
         <p>

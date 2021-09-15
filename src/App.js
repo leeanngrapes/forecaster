@@ -42,16 +42,14 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <Container className="mt-5">
           <h4>Looking ahead</h4>
-          <Row className="flex-row mt-3">
+          <Row className="d-flex mt-4 flex-row justify-content-center">
             {forecast.map((item, i) => (
-              <Col key={i}>
-                <Tile
-                  day={item.day}
-                  minTemp={item.minTemp}
-                  maxTemp={item.maxTemp}
-                  overview={item.overview}
-                />
-              </Col>
+              <Tile
+                day={item.day}
+                minTemp={item.minTemp}
+                maxTemp={item.maxTemp}
+                overview={item.overview}
+              />
             ))}
           </Row>
         </Container>
