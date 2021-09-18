@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import "./App.css";
+import "./App.scss";
 import { Container, Row, Col } from "react-bootstrap";
 import Tile from "./components/Tile";
 import NavigationBar from "./components/Nav";
