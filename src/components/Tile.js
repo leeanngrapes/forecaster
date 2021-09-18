@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import styles from "./tile.css";
+import "./tile.css";
 
 function Tile(props) {
   return (

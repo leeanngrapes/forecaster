@@ -1,14 +1,17 @@
+@import "styles/colors";
+
 .App {
   text-align: center;
 }
 
 h1 {
   font-size: 1.5em;
-  color: rgba(255, 255, 255, 0.5);
+  color: $color-white-50;
 }
 
 h2 {
   font-size: 2.25em;
+  color: $color-orange;
 }
 
 h3 {
@@ -28,9 +31,9 @@ p {
   background: rgb(40, 44, 52);
   background: linear-gradient(
     180deg,
-    rgba(40, 44, 52, 1) 6%,
-    rgba(18, 18, 112, 1) 67%,
-    rgba(0, 212, 255, 1) 100%
+    $color-deep-blue 26%,
+    $color-sea-green 67%,
+    $color-yellow 100%
   );
   min-height: 100vh;
   display: flex;
