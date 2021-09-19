@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
-import "./App.css";
-import { Container, Row, Col } from "react-bootstrap";
+import "./App.scss";
+import { Container, Row } from "react-bootstrap";
 import Tile from "./components/Tile";
 import NavigationBar from "./components/Nav";
 // import clouds from "./assets/";
@@ -26,6 +26,18 @@ function App() {
       day: "Wednesday",
       minTemp: "45",
       maxTemp: "84",
+      overview: "Sunny",
+    },
+    {
+      day: "Thursday",
+      minTemp: "41",
+      maxTemp: "74",
+      overview: "Sunny",
+    },
+    {
+      day: "Friday",
+      minTemp: "45",
+      maxTemp: "76",
       overview: "Sunny",
     },
   ];

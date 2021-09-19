@@ -1,5 +1,6 @@
+@import "../styles/colors";
+
 .tile {
-  color: rgb(26, 19, 92);
   background: rgba(255, 255, 255, 0.3) !important;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -11,11 +12,13 @@
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-size: 2rem;
+  color: $color-midnight;
 }
 
 p {
   font-size: 1em;
 }
+
 .shape {
   position: absolute;
   width: 150px;
