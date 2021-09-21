@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import logo from "./logo.svg";
 import "./App.scss";
 import { Container, Row, Col } from "react-bootstrap";
@@ -42,6 +44,25 @@ function App() {
       overview: "Sunny",
     },
   ];
+
+  //items = the characters or the weather (not sure how yet)
+  //returns an empty array to start with
+  const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchItems = async () => {
+      const result = await axios(
+        // `https://www.breakingbadapi.com/api/characters`
+        `https://api.openweathermap.org/data/2.5/onecall?lat=41.1400&lon=-104.8202&exclude=alerts&units=imperial&appid=0d6e82bfca79ee7a6e0802e4310db241`
+      );
+      console.log(result.data);
+      setItems(result.data);
+      setIsLoading(false);
+    };
+
+    fetchItems();
+  }, []);
 
   return (
     <div className="App">
