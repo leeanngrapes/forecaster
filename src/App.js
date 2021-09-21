@@ -6,7 +6,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Tile from "./components/Tile";
 import NavigationBar from "./components/Nav";
 import Header from "./components/Header";
-// import clouds from "./assets/";
+import ForecastGrid from "./components/ForecastGrid";
 
 const town = "Cheyenne";
 const weather = "cloudy";
@@ -45,8 +45,6 @@ function App() {
     },
   ];
 
-  //items = the characters or the weather (not sure how yet)
-  //returns an empty array to start with
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -70,10 +68,13 @@ function App() {
       <header className="App-header">
         <h1>Forecaster</h1>
         <h2>
-          It is <em>{weather}</em> today in <u>{town}</u>.
+          It is <em>{items.current.weather[0].main}</em> today in <u>{town}</u>.
         </h2>
+        <h3>Feels like {items.current.feels_like} degrees F.</h3>
         <h3>The time is {new Date().toLocaleTimeString()}.</h3>
         <img src={logo} className="App-logo" alt="logo" />
+        {/* TODO: Put forecast cards in a grid */}
+        <ForecastGrid isLoading={isLoading} items={items} />
         <Container className="mt-5">
           <h4>Looking ahead</h4>
           <Row className="d-flex mt-4 flex-row justify-content-center">
@@ -81,9 +82,10 @@ function App() {
               <Col>
                 <Tile
                   day={item.day}
-                  minTemp={item.minTemp}
-                  maxTemp={item.maxTemp}
-                  overview={item.overview}
+                  // TODO: Loop through the daily array
+                  minTemp={items.daily[1].temp.min}
+                  maxTemp={items.daily[1].temp.max}
+                  overview={items.daily[1].weather[0].main}
                 />
               </Col>
             ))}
