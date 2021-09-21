@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.scss";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Tile from "./components/Tile";
 import NavigationBar from "./components/Nav";
 // import clouds from "./assets/";
@@ -56,12 +56,14 @@ function App() {
           <h4>Looking ahead</h4>
           <Row className="d-flex mt-4 flex-row justify-content-center">
             {forecast.map((item, i) => (
-              <Tile
-                day={item.day}
-                minTemp={item.minTemp}
-                maxTemp={item.maxTemp}
-                overview={item.overview}
-              />
+              <Col>
+                <Tile
+                  day={item.day}
+                  minTemp={item.minTemp}
+                  maxTemp={item.maxTemp}
+                  overview={item.overview}
+                />
+              </Col>
             ))}
           </Row>
         </Container>
