@@ -27,7 +27,6 @@ p {
 }
 
 .App-header {
-  /* background-color: #282c34; */
   background: rgb(40, 44, 52);
   background: linear-gradient(
     180deg,
@@ -62,4 +61,10 @@ p {
   to {
     transform: rotate(360deg);
   }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 }
