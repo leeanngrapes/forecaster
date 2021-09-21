@@ -3,6 +3,7 @@ import "./App.scss";
 import { Container, Row, Col } from "react-bootstrap";
 import Tile from "./components/Tile";
 import NavigationBar from "./components/Nav";
+import Header from "./components/Header";
 // import clouds from "./assets/";
 
 const town = "Cheyenne";
@@ -37,7 +38,7 @@ function App() {
     {
       day: "Friday",
       minTemp: "45",
-      maxTemp: "76",
+      maxTemp: "75",
       overview: "Sunny",
     },
   ];
