@@ -1,10 +1,10 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 import "./tile.scss";
 
 function Tile(props) {
   return (
-    <Card className="p-3 m-3 tile col-md">
+    <Container className="p-3 m-3 tile">
       <h4 className="tile-title">{props.day}</h4>
       <div className="d-flex flex-row justify-content-center">
         <p>
@@ -12,7 +12,7 @@ function Tile(props) {
         </p>
       </div>
       <p>{props.overview}</p>
-    </Card>
+    </Container>
   );
 }
 
