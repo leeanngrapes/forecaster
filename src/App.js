@@ -45,6 +45,10 @@ function App() {
     },
   ];
 
+  //TODO: Figure out why build error occurs on first build with apiKey
+  // If instances are commented out, it builds. Then, if uncommented and saved, it builds.
+  const apiKey = process.env.REACT_APP_API_KEY;
+
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -52,7 +56,7 @@ function App() {
     const fetchItems = async () => {
       const result = await axios(
         // `https://www.breakingbadapi.com/api/characters`
-        `https://api.openweathermap.org/data/2.5/onecall?lat=41.1400&lon=-104.8202&exclude=alerts&units=imperial&appid={key}`
+        `https://api.openweathermap.org/data/2.5/onecall?lat=41.1400&lon=-104.8202&exclude=alerts&units=imperial&appid=${apiKey}`
       );
       console.log(result.data);
       setItems(result.data);
