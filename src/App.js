@@ -6,7 +6,8 @@ import NavigationBar from "./components/Nav";
 import ForecastGrid from "./components/ForecastGrid";
 
 function App() {
-  //TODO: Round degrees to nearest whole number
+  //TODO: Toggle for metric vs imperial units
+  //TODO: Search for your city and pull API for that lat/long
 
   const apiKey = process.env.REACT_APP_API_KEY;
 
