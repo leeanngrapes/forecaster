@@ -7,7 +7,6 @@ import ForecastGrid from "./components/ForecastGrid";
 
 function App() {
   //TODO: Round degrees to nearest whole number
-  //TODO: Convert datetime to day of the week
 
   const apiKey = process.env.REACT_APP_API_KEY;
 
@@ -17,7 +16,6 @@ function App() {
   useEffect(() => {
     const fetchItems = async () => {
       const result = await axios(
-        // `https://www.breakingbadapi.com/api/characters`
         `https://api.openweathermap.org/data/2.5/onecall?lat=41.1400&lon=-104.8202&exclude=alerts&units=imperial&appid=${apiKey}`
       );
       console.log(result.data);
