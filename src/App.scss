@@ -68,3 +68,9 @@ p {
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
+
+.text-button {
+  background-color: transparent !important;
+  margin: 1em !important;
+  border-color: $color-yellow !important;
+}
