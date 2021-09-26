@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 import axios from "axios";
 import logo from "./logo.svg";
 import "./App.scss";
@@ -42,14 +42,14 @@ function App() {
   return (
     <div className="App">
       <NavigationBar />
-      <header className="App-header">
+      <Container fluid className="app-body">
         <h1>Forecaster</h1>
         <img src={logo} className="App-logo" alt="logo" />
         <Button onClick={() => setToggle(!toggle)} className="text-button">
           Change units
         </Button>
         <ForecastGrid isLoading={isLoading} items={items} />
-      </header>
+      </Container>
     </div>
   );
 }

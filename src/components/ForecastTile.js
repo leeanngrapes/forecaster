@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "./tile.scss";
 
 const ForecastTile = ({ item }) => {
@@ -16,15 +16,23 @@ const ForecastTile = ({ item }) => {
   var minTemp = Math.round(item.temp.min);
 
   return (
-    <Container className="p-3 m-3 tile">
+    <Col className="p-3 m-3 tile">
       <h4 className="tile-title">{day.toLocaleString("en-us", options)}</h4>
-      <div className="d-flex flex-row justify-content-center">
-        <p>
-          {maxTemp}° {""}|{""} {minTemp}°
-        </p>
-      </div>
+
+      <Row>
+        <Col className="align-items-center">
+          <p>{maxTemp}°</p>
+          <p className="caption">High</p>
+        </Col>
+        |
+        <Col className="align-items-center">
+          <p>{minTemp}°</p>
+          <p className="caption">Low</p>
+        </Col>
+      </Row>
+      <p className="caption mb-0">What to expect today:</p>
       <p>{item.weather[0].main}</p>
-    </Container>
+    </Col>
   );
 };
 

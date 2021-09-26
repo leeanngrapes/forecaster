@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import ForecastTile from "./ForecastTile";
 
 //TODO: Conditionally change color of text or an image based on weather type
@@ -22,11 +22,11 @@ const ForecastGrid = ({ items, isLoading }) => {
         {new Date().toLocaleTimeString({ hour: "2-digit", hour12: false })}.
       </h3>
       <h1>Forecast:</h1>
-      <section className="cards">
+      <Row className="flex-row">
         {items.daily.map((item) => (
           <ForecastTile key={item.dt} item={item}></ForecastTile>
         ))}
-      </section>
+      </Row>
     </Container>
   );
 };
