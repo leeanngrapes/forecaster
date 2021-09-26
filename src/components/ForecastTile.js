@@ -12,13 +12,15 @@ const ForecastTile = ({ item }) => {
     month: "long",
     day: "numeric",
   };
+  var maxTemp = Math.round(item.temp.max);
+  var minTemp = Math.round(item.temp.min);
 
   return (
     <Container className="p-3 m-3 tile">
       <h4 className="tile-title">{day.toLocaleString("en-us", options)}</h4>
       <div className="d-flex flex-row justify-content-center">
         <p>
-          {item.temp.max}° {""}|{""} {item.temp.min}°
+          {maxTemp}° {""}|{""} {minTemp}°
         </p>
       </div>
       <p>{item.weather[0].main}</p>
