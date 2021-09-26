@@ -16,7 +16,7 @@ const ForecastTile = ({ item }) => {
   var minTemp = Math.round(item.temp.min);
 
   return (
-    <Container className="p-3 m-3 tile">
+    <Col className="p-3 m-3 tile">
       <h4 className="tile-title">{day.toLocaleString("en-us", options)}</h4>
 
       <Row>
@@ -32,7 +32,7 @@ const ForecastTile = ({ item }) => {
       </Row>
       <p className="caption mb-0">What to expect today:</p>
       <p>{item.weather[0].main}</p>
-    </Container>
+    </Col>
   );
 };
 
