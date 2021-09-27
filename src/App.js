@@ -23,6 +23,7 @@ function App() {
   const [toggle, setToggle] = useState(false);
 
   const units = toggle ? "imperial" : "metric";
+  const city = "Cheyenne";
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -48,6 +49,9 @@ function App() {
         <Button onClick={() => setToggle(!toggle)} className="text-button">
           Change units
         </Button>
+        <h2>
+          Your location is <em>{city}</em>.
+        </h2>
         <ForecastGrid isLoading={isLoading} items={items} />
       </Container>
     </div>
